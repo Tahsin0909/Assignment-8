@@ -11,9 +11,12 @@ import {
 import './index.css'
 
 import Home from './Components/Home/Home';
-import Banner from './Components/Banner/Banner';
+
 import Donation from './Components/Donation/Donation';
 import Statistics from './Statistics/Statistics';
+
+import HomeOthers from './Components/HomeOthers/HomeOthers';
+import Details from './Components/Details/Details';
 
 
 
@@ -22,22 +25,28 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
-    loader: ()=> fetch('../data.json'),
-    children:[
+    children: [
       {
-        path:'/',
-        element:<Banner></Banner>
+        path: '/',
+        loader: () => fetch('../data.json'),
+        element: <HomeOthers></HomeOthers>
+      },
+
+      {
+        path: '/donation',
+        element: <Donation></Donation>
       },
       {
-        path:'/donation',
-        element:<Donation></Donation>
+        path: '/statistics',
+        element: <Statistics></Statistics>
       },
       {
-        path:'/statistics',
-        element:<Statistics></Statistics>
+        path:'/:id',
+        loader: () => fetch('../data.json'),
+        element: <Details></Details>
       }
     ]
-    
+
   },
 ]);
 

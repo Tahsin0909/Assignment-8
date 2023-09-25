@@ -1,35 +1,24 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
+import CardData from "./Cards";
 
-const CardData = ({ card }) => {
-    console.log(card)
-    const { picture, category
-        , card_bg_color
-        , category_bg_color, title
-        , text_button_bg_color } = card
-        console.log(category_bg_color)
+
+const Card = ({fakeData}) => {
+
+    const [data, setData] = useState([])
+
+    useEffect(()=>{
+        setData(fakeData)
+    },[])
+    console.log(data)
+    
     return (
-        <div className="mx-4 my-4">
-            <img className="w-64 md:w-80 lg:w-[400px]  h-40" src={picture} alt="" />
-            <div
-            style={{
-                backgroundColor:`${card_bg_color}`
-            }}
-            className={` bg-opacity-50 py-2 px-4 flex flex-col gap-1 `}>
-                <p 
-                style={{
-                    backgroundColor:`${category_bg_color}`,
-                    color:`${text_button_bg_color}`
-                }}
-                className={`   font-semibold  text-sm  py-1 px-4 w-fit`} >{category}</p>
-                <p
-                style={{
-                    color:`${text_button_bg_color}`
-                }}
-                className={` font-semibold`} >{title}</p>
-            </div>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-4 md:mx-10 mb-8'>
+            {
+                data?.map(card => <CardData key={card.id} card={card}></CardData>)
+            }
         </div>
     );
 };
 
-export default CardData;
+export default Card;

@@ -22,7 +22,7 @@ return (
             <NavBar></NavBar>
             <Outlet></Outlet>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-10'>
             {
                 data?.map(card => <CardData key={card.id} card={card}></CardData>)
             }

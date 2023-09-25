@@ -7,13 +7,26 @@ const CardData = ({ card }) => {
         , card_bg_color
         , category_bg_color, title
         , text_button_bg_color } = card
-        console.log(text_button_bg_color)
+        console.log(category_bg_color)
     return (
-        <div className="mx-10">
-            <img className="w-64 md:w-72 lg:w-[400px]  h-40" src={picture} alt="" />
-            <div className={`bg-[${card_bg_color}]  p-2 flex flex-col gap-2 border-2 border-red-700`}>
-                <p className={`text-[${text_button_bg_color}] `}>{category}</p>
-                <p>{title}</p>
+        <div className="mx-4 my-4">
+            <img className="w-64 md:w-80 lg:w-[400px]  h-40" src={picture} alt="" />
+            <div
+            style={{
+                backgroundColor:`${card_bg_color}`
+            }}
+            className={` bg-opacity-50 py-2 px-4 flex flex-col gap-1 `}>
+                <p 
+                style={{
+                    backgroundColor:`${category_bg_color}`,
+                    color:`${text_button_bg_color}`
+                }}
+                className={`   font-semibold  text-sm  py-1 px-4 w-fit`} >{category}</p>
+                <p
+                style={{
+                    color:`${text_button_bg_color}`
+                }}
+                className={` font-semibold`} >{title}</p>
             </div>
         </div>
     );

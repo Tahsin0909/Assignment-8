@@ -50,7 +50,7 @@ const Donations = () => {
                         showData.slice(0, seeMore).map(Data => <Donation key={Data.id} Data={Data}></Donation>)
                     }
                 </div>
-                <div className={`text-center ${showData.length > 4? ' ': 'hidden'}`}>
+                <div className={`text-center ${showData.length > 4? ' ': 'hidden'} mb-10`}>
                     <button onClick={() => handleBtn()} className="btn btn-primary">{`${seeMore == 4 ? 'See More': 'See Less'}`}</button>
                 </div>
             </div>

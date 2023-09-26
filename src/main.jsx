@@ -12,11 +12,12 @@ import './index.css'
 
 import Home from './Components/Home/Home';
 
-import Statistics from './Statistics/Statistics';
+// import Statistics from './Statistics/Statistics';
 
 import HomeOthers from './Components/HomeOthers/HomeOthers';
 import Details from './Components/Details/Details';
 import Donations from './Components/Donation/Donations';
+import Statistics from './Statistics/Statistics';
 
 
 

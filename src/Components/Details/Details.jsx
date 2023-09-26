@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 
 import { useLoaderData, useParams } from "react-router-dom";
-import swal from 'sweetalert';
  import { setStoredData } from "../LocalStorage/LocalStorage";
 const Details = () => {
     const detailsData = useLoaderData()
@@ -16,41 +15,9 @@ const Details = () => {
     // console.log(detail)
 
 
-    // const getStoredData = () => {
 
-    //     const storedData = localStorage.getItem('Donate')
-    //     if (storedData) {
-    //         return JSON.parse(storedData)
-    //     }
-    //     return [];
-    // }
-
-    // const setStoredData = id => {
-    //     const getLsData = getStoredData()
-
-    //     const isExist = getLsData.find(storedData => storedData == id)
-
-    //     if (!isExist) {
-    //         getLsData.push(id);
-    //         localStorage.setItem('Donate', JSON.stringify(getLsData))
-
-    //     }
-    //     else {
-           
-    //     }
-    //     // localStorage.removeItem('Donate')
-        
-    // }
-
-    const swalData = () =>{
-        swal("Success", "Thank you for your donation!", "success");
-    }
-    const errorSwalData = () =>{
-        swal("Failed!", "You Have Already Donated", "error");
-    }
     const handleBtn = () =>{
         setStoredData(DonateID);
-        
     }
 
 

@@ -12,11 +12,11 @@ import './index.css'
 
 import Home from './Components/Home/Home';
 
-import Donation from './Components/Donation/Donation';
 import Statistics from './Statistics/Statistics';
 
 import HomeOthers from './Components/HomeOthers/HomeOthers';
 import Details from './Components/Details/Details';
+import Donations from './Components/Donation/Donations';
 
 
 
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: '/donation',
         loader: () => fetch('../data.json'),
-        element: <Donation></Donation>
+        element: <Donations></Donations>
       },
       {
         path: '/statistics',

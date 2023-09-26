@@ -9,7 +9,7 @@ const Card = ({fakeData}) => {
 
     useEffect(()=>{
         setData(fakeData)
-    },[])
+    },[fakeData])
     console.log(data)
     
     return (

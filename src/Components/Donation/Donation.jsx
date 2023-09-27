@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 
 const Donation = ({ Data }) => {
-    console.log(Data)
     const { picture, category
         , card_bg_color
         , category_bg_color, title

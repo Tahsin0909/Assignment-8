@@ -4,12 +4,12 @@
 import {  Link } from "react-router-dom";
 
 const CardData = ({ card }) => {
-    console.log(card)
+    // console.log(card)
     const { picture, category
         , card_bg_color
         , category_bg_color, title
         , text_button_bg_color } = card
-    console.log(category_bg_color)
+    // console.log(category_bg_color)
 
 
     return (

@@ -21,7 +21,7 @@ const ErrorPage = () => {
 
                                     <p>the page you are looking for not available!</p>
 
-                                    <a href="/" className="link_404 rounded-lg">Go to Home</a>
+                                    <a href="/" className="link_404 rounded-lg hover:">Go to Home</a>
                                 </div>
                             </div>
                         </div>

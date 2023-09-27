@@ -10,7 +10,7 @@ const Card = ({fakeData}) => {
     useEffect(()=>{
         setData(fakeData)
     },[fakeData])
-    console.log(data)
+    // console.log(data)
     
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-4 md:mx-10 mb-8'>

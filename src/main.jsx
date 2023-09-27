@@ -18,6 +18,7 @@ import HomeOthers from './Components/HomeOthers/HomeOthers';
 import Details from './Components/Details/Details';
 import Donations from './Components/Donation/Donations';
 import Statistics from './Statistics/Statistics';
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 
 
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -40,6 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/statistics',
+        loader: () => fetch('../data.json'),
         element: <Statistics></Statistics>
       },
       {

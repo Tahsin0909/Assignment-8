@@ -1,13 +1,31 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
+import { useLoaderData } from 'react-router-dom';
+import { getStoredData } from '../Components/LocalStorage/LocalStorage';
 
 
 const Statistics = () => {
 
-  const seriesData = [230, 34]
-  const labelsData = ['Total Donation', 'Your Donation']
+  const StatisticDataMain = useLoaderData()
 
+  const TotalDonation = StatisticDataMain.length;
+  
+  const StatisticDataDonation = getStoredData()
+
+  const YourDonation = StatisticDataDonation.length;
+
+  const TotalDonationLeft = TotalDonation - YourDonation;
+  
+  
+  
+  // const seriesData = [100, 100]
+  const seriesData = [TotalDonationLeft, YourDonation]
+  const labelsData = ['Total Donation Left', 'Your Donation']
+
+  
+  
+  
   return (
     <div>
       <div className='lg:flex hidden justify-center'>

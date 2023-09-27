@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement:<ErrorPage errorMessage={'The page you are looking for not available!'}></ErrorPage>,
     children: [
       {
         path: '/',

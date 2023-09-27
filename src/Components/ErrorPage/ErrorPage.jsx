@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import './ErrorPage.css'
 
-const ErrorPage = () => {
+const ErrorPage = ({errorMessage}) => {
     return (
         <div>
             <section className="page_404">
@@ -19,7 +20,7 @@ const ErrorPage = () => {
                                         Look like you are lost
                                     </h3>
 
-                                    <p>the page you are looking for not available!</p>
+                                    <p>{errorMessage}</p>
 
                                     <a href="/" className="link_404 rounded-lg hover:">Go to Home</a>
                                 </div>
